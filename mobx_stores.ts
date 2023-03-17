@@ -139,7 +139,7 @@ export class _Utils {
 export class MapStore {
   // helpers
   utils = new _Utils(this);
-  ...
+  // ...
     
   constructor(rootStore: RootStore) {
     makeAutoObservable(this);
@@ -151,14 +151,14 @@ import { makeAutoObservable } from "mobx";
 import { MapStore } from "./mapStore";
 
 class RootStore {
-  readonly mapStore: MapStore;
-  ...other stores
+  public readonly mapStore: MapStore;
+  // ...other stores
 
   constructor() {
     makeAutoObservable(this);
     
     this.mapStore = new MapStore(this);
-    ...othser stores
+    // ...othser stores
   }
 }
 
